@@ -1,4 +1,4 @@
-$accent:#f3ad38;
+$accent: #f3ad38;
 $dark: #1a212d;
 $darker: #141820;
 $lighter: #1d2736;
@@ -7,13 +7,13 @@ $text-secondary : #b6bbcc;
 $text-dark: #080808;
 $text-highlight: #008fec;
 $player1: #2264e3;
-$player1-zone:#162642;
+$player1-zone: #162642;
 $player2: #e93838;
-$player2-zone:#411f1f;     
-$traits: #cd13b5; 
+$player2-zone: #411f1f;
+$traits: #cd13b5;
 $moveable: #5dade3;
 $attackable: #e35d5d;
-$areaable:#e3c45d;
+$areaable: #e3c45d;
 
 
 /*---------------------------------------------------
@@ -33,45 +33,46 @@ body {
   overflow: hidden;
 }
 
-.primary-btn{
+.primary-btn {
 
   background-color: $accent;
   color: $text-dark;
-  border:none;
-  font-size:1rem;
+  border: none;
+  font-size: 1rem;
   padding: 12px 16px;
-  border-radius:4px;
+  border-radius: 4px;
   transition: 0.2s ease;
 
-  &:hover{
+  &:hover {
 
     transform: scale(1.02);
     cursor: pointer;
   }
 }
 
-.question-btn{
+.question-btn {
 
-    background-color: #1d2736;
-    color: #b6bbcc;
-    border: none;
-    padding: 12px 16px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top:2px;
+  background-color: #1d2736;
+  color: #b6bbcc;
+  border: none;
+  padding: 12px 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
 
-  &:hover{
+  &:hover {
     color: $text-light;
     cursor: pointer;
   }
-  .help{
+
+  .help {
     font-size: 1.2rem !important;
   }
 }
 
-.modal{
+.modal {
 
   display: none;
   justify-items: center;
@@ -85,61 +86,63 @@ body {
   height: 100vh;
   justify-content: center;
   align-content: center;
-  
-  #content{
+
+  #content {
 
     background-color: $dark;
     padding: 2rem;
-    border-radius:0.25rem;
+    border-radius: 0.25rem;
     width: 450px;
-    
-    h2{
 
-      margin-bottom:2rem;
+    h2 {
+
+      margin-bottom: 2rem;
     }
 
-    p{
+    p {
 
       line-height: 1.5;
       color: $text-secondary;
     }
 
-    ol{
+    ol {
 
-      margin-left:1rem;
-      margin-bottom:2rem;
+      margin-left: 1rem;
+      margin-bottom: 2rem;
     }
   }
 
-  .close{
+  .close {
 
-    width:100%;
+    width: 100%;
     padding: 12px 16px;
     border-radius: 4px;
     background: $accent;
     color: $text-dark;
-    border:none;
+    border: none;
     transition: 0.2s ease;
 
-    &:hover{
+    &:hover {
 
       transform: scale(1.02);
-      cursor:pointer;
+      cursor: pointer;
     }
   }
 }
 
-.active{
-  display:flex;
+.active {
+  display: flex;
 }
 
-.player1, .player2{
+.player1,
+.player2 {
 
-    border-radius: 4px;
-    width: 28px;
+  border-radius: 4px;
+  width: 28px;
 }
+
 img.player1 {
-    background: $player1;
+  background: $player1;
 }
 
 img.player2 {
@@ -147,81 +150,93 @@ img.player2 {
 }
 
 
-.disabled{
+.disabled {
 
-  border:none;
+  border: none;
   background: $lighter;
   pointer-events: none;
   opacity: 0.5;
 }
 
-.moveable{
+.moveable {
 
   background: $moveable !important;
-  &:hover{
-    cursor:pointer;
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
-.attackable{
+.attackable {
   background-color: $attackable !important;
-  &:hover{
-    cursor:pointer;
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
 .areable {
   background-color: $areaable !important;
+
   &:hover {
-    cursor:pointer;
+    cursor: pointer;
   }
 }
+
 /*---------------------------------------------------
 SPLASH SCENE
 ---------------------------------------------------*/
-#splash{
+#splash {
 
-    background-image: url("../img/bg_splash.png");
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.7;
+  background-image: url("../img/bg_splash.png");
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
 
-    &:hover{
-      cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
+
+  #startBtn {
+
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transform: translateY(50%);
+    font-size: 2rem;
+    animation: blinker 1.5s linear infinite;
+
+  }
+
+  @keyframes blinker {
+    0% {
+      opacity: 1.0;
     }
 
-    #startBtn{
-
-        position: fixed;
-        text-align: center;
-        width:100%;
-        height:100%;
-        color:white;
-        transform: translateY(50%);
-        font-size: 2rem;
-        animation: blinker 1.5s linear infinite;
-
+    50% {
+      opacity: 0.0;
     }
 
-    @keyframes blinker {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+    100% {
+      opacity: 1.0;
     }
+  }
 }
 
 /*---------------------------------------------------
 TITLE SCENE
 ---------------------------------------------------*/
-#title{
+#title {
   background-image: url("../img/bg_splash.png");
   width: 100vw;
   height: 100vh;
@@ -237,61 +252,61 @@ TITLE SCENE
   flex-direction: column;
   align-content: center;
 
-  #gameName{
+  #gameName {
 
-    font-size: 4rem; 
+    font-size: 4rem;
     font-family: "Uncial Antiqua", system-ui;
     font-weight: 500;
-    font-style:normal;
+    font-style: normal;
     color: $accent;
     text-shadow: 4px 5px 15px #000000;
-    margin-bottom:4rem;
+    margin-bottom: 4rem;
   }
 
-  #difDesc{
+  #difDesc {
 
-    margin-bottom:1rem;
-    color:$dark;
+    margin-bottom: 1rem;
+    color: $dark;
     font-weight: bold;
     text-shadow: 0px 0px 5px white;
   }
 
-  .menu{
+  .menu {
 
-    background:#1a212d9f;
+    background: #1a212d9f;
     border-radius: 8px;
-    width:300px;
+    width: 300px;
     text-align: center;
 
-    .menu-item{
+    .menu-item {
       padding: 1rem;
       transition: 0.2s ease;
 
 
-      &:hover{
-        background:$lighter;
+      &:hover {
+        background: $lighter;
         cursor: pointer;
         color: $accent;
-        border-radius:8px;
-        transform:scale(1.1);
+        border-radius: 8px;
+        transform: scale(1.1);
       }
     }
   }
-  
+
 }
 
 /*---------------------------------------------------
 DEPLOYMENT SCENE
 ---------------------------------------------------*/
-#deployment{
+#deployment {
 
   height: 100%;
   width: 100%;
   background: $dark;
   color: $text-light;
-  display:flex;
+  display: flex;
 
-  .centerPanel{
+  .centerPanel {
     display: flex;
     width: 80%;
     justify-items: center;
@@ -302,138 +317,147 @@ DEPLOYMENT SCENE
 
   }
 
-  .leftPanel, .rightPanel{
+  .leftPanel,
+  .rightPanel {
     background: $lighter;
-    padding:1rem;
-    min-width:200px;
+    padding: 1rem;
+    min-width: 200px;
 
-    .headerPanel{
-      font-weight:bold;
+    .headerPanel {
+      font-weight: bold;
       font-size: 1rem;
       margin: 1rem 0;
       color: $text-light;
     }
-    
+
 
   }
 
-  .playercoin{
-      display:flex;
-      align-items: center;
-      color: $text-secondary;
-      justify-content: space-between;
-      margin-bottom:1rem;
-
-    img{
-
-      width:24px;
-      height:24px;
-    }
-    .coin{
-
-      font-weight:bold;
-    }
-  }
-
-  .unit-item{
-
-    padding:1rem;
-    border-radius: 4px;
-    margin-bottom:4px;
-    background:$darker;
-    transition: 0.2s ease;
-    font-size:0.9rem;
-    display:flex;
+  .playercoin {
+    display: flex;
+    align-items: center;
+    color: $text-secondary;
     justify-content: space-between;
-    align-items:center;
+    margin-bottom: 1rem;
 
-    .unit-content{
-      display:flex;
-      gap:8px;
+    img {
+
+      width: 24px;
+      height: 24px;
+    }
+
+    .coin {
+
+      font-weight: bold;
+    }
+  }
+
+  .unit-item {
+
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    background: $darker;
+    transition: 0.2s ease;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .unit-content {
+      display: flex;
+      gap: 8px;
       align-items: center;
       color: $text-secondary;
 
-      img{
-        width:24px;
-        height:24px;
+      img {
+        width: 24px;
+        height: 24px;
       }
 
     }
 
-    .unit-coin{
-      display:flex;
+    .unit-coin {
+      display: flex;
       align-items: center;
       color: $text-secondary;
-      
-      img{
 
-        width:16px;
-        height:16px;
+      img {
+
+        width: 16px;
+        height: 16px;
       }
-      .unit-dp{
+
+      .unit-dp {
 
         font-weight: bold;
       }
 
     }
 
-    &:hover{
+    &:hover {
 
-      transform:scale(1.05);
+      transform: scale(1.05);
       cursor: pointer;
 
     }
 
   }
-  .selected{
+
+  .selected {
     border: 1px solid $text-secondary;
   }
 
-  
-#unitInfo{
 
-  font-size: 0.9rem;
-  .unit-row, .info-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom:1rem;
+  #unitInfo {
 
-    & img{
-      color: $text-secondary;
-      width: 24px;
-      height: 24px;
+    font-size: 0.9rem;
 
+    .unit-row,
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+
+      & img {
+        color: $text-secondary;
+        width: 24px;
+        height: 24px;
+
+      }
     }
-  }
 
-  .unit-name, .info-name {
-    flex: 1;
-    text-align: left;
-    color: $text-secondary;
-  }
+    .unit-name,
+    .info-name {
+      flex: 1;
+      text-align: left;
+      color: $text-secondary;
+    }
 
-  .unit-count, .info-value {
+    .unit-count,
+    .info-value {
       color: $text-light;
       font-weight: bold;
       min-width: 40px;
       text-align: center;
-  }
+    }
 
-  .unit-name{
-    margin-bottom:1rem;
-  }
+    .unit-name {
+      margin-bottom: 1rem;
+    }
 
-  .info-traits{
-    color:$traits !important;
-  }
-  hr{
-    margin-bottom:1rem;
+    .info-traits {
+      color: $traits !important;
+    }
+
+    hr {
+      margin-bottom: 1rem;
+    }
   }
 }
-}
 
-.board{
+.board {
 
   .tile {
     width: 40px;
@@ -443,42 +467,45 @@ DEPLOYMENT SCENE
     display: flex;
     justify-content: center;
     align-items: center;
-      &:hover {
+
+    &:hover {
       background: #fc7b03;
       opacity: 0.4;
-      }
-      & img.unit {
+    }
+
+    & img.unit {
       width: 32px;
       height: 32px;
       border-radius: 4px;
-      }
+    }
   }
 
 }
 
-#bar-container{
-  width: 50%; 
-  margin: 20% auto; 
+#bar-container {
+  width: 50%;
+  margin: 20% auto;
   border: 1px solid white;
-  border-radius:8px;
+  border-radius: 8px;
 
-  #progress-bar{
+  #progress-bar {
     width: 0%;
-     height: 1rem; 
-     background: $accent;
-    border-radius:8px;
+    height: 1rem;
+    background: $accent;
+    border-radius: 8px;
   }
 }
 
 /**---------------------------------------------------
 BATTLE SCENE
 ------------------------------------------------------*/
-#battle{
+#battle {
   height: 100%;
   width: 100%;
   background: $dark;
   color: $text-light;
-  .centerPanel{
+
+  .centerPanel {
     display: flex;
     justify-items: center;
     flex-direction: row;
@@ -486,33 +513,35 @@ BATTLE SCENE
     justify-content: center;
     align-items: center;
     align-content: center;
-    height:100vh;
+    height: 100vh;
 
   }
 
-  .leftPanel, .rightPanel{
+  .leftPanel,
+  .rightPanel {
     background: $lighter;
-    padding:1rem;
-    min-width:200px;
+    padding: 1rem;
+    min-width: 200px;
 
-    .headerPanel{
-      font-weight:bold;
+    .headerPanel {
+      font-weight: bold;
       font-size: 1rem;
       margin: 1rem 0;
       color: $text-light;
     }
-    
+
 
   }
 
-  #turnEnd{
+  #turnEnd {
     margin: 0.5rem 2rem;
     width: 250px;
     font-weight: 600;
-    border:1px solid $darker;
+    border: 1px solid $darker;
   }
 
-  #unitStatus, #unitAttribute{
+  #unitStatus,
+  #unitAttribute {
     background: #1d2736;
     width: 250px;
     padding: 1rem 2rem;
@@ -520,7 +549,7 @@ BATTLE SCENE
     border: 1px solid #141820;
     margin: 0.5rem 2rem;
 
-    .statusRow{
+    .statusRow {
       display: flex;
       gap: 2rem;
       flex-direction: row;
@@ -530,25 +559,25 @@ BATTLE SCENE
       align-items: center;
       line-height: 1.5rem;
 
-      #unitName{
+      #unitName {
 
         font-weight: bold;
       }
 
-      .paramName{
+      .paramName {
 
         color: $text-secondary;
-        font-size:0.8rem;
+        font-size: 0.8rem;
       }
 
-      .paramValue{
+      .paramValue {
         color: $text-highlight;
         font-weight: bold;
-        font-size:0.8rem;
+        font-size: 0.8rem;
       }
     }
   }
-  
+
 }
 
 
@@ -562,9 +591,9 @@ BATTLE SCENE
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 
-  
+
 }
 
 .menu-btn {
@@ -578,17 +607,17 @@ BATTLE SCENE
   transition: background 0.2s;
 
   &:hover {
-  background: #353535;
+    background: #353535;
   }
 
   & .cancel {
-  color: #ff4444;
-  border-top: 1px solid #444;
-  margin-top: 5px;
+    color: #ff4444;
+    border-top: 1px solid #444;
+    margin-top: 5px;
   }
 }
 
-.unit:hover{
+.unit:hover {
   cursor: pointer;
 }
 
@@ -599,13 +628,14 @@ BATTLE SCENE
   body {
     overflow: hidden;
   }
-  
+
   #title {
     #gameName {
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 2rem;
     }
+
     .menu {
       width: 90%;
     }
@@ -615,7 +645,7 @@ BATTLE SCENE
   #deployment {
     flex-direction: column;
     height: 100vh;
-    
+
     .rightPanel {
       // Unit Info (Top Bar)
       position: fixed;
@@ -629,12 +659,23 @@ BATTLE SCENE
       z-index: 2000;
       background: rgba(26, 33, 45, 0.95);
       backdrop-filter: blur(5px);
-      
-      .headerPanel { margin: 0.5rem 0; font-size: 0.9rem;}
+
+      .headerPanel {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+      }
+
       #unitInfo {
-          font-size: 0.8rem;
-          .unit-row, .info-row { margin-bottom: 0.5rem; }
-          hr { margin-bottom: 0.5rem; }
+        font-size: 0.8rem;
+
+        .unit-row,
+        .info-row {
+          margin-bottom: 0.5rem;
+        }
+
+        hr {
+          margin-bottom: 0.5rem;
+        }
       }
     }
 
@@ -649,21 +690,23 @@ BATTLE SCENE
       padding-bottom: 40vh; // push above bottom menu
       display: block; // cancel flex to allow native scroll bounds
       box-sizing: border-box;
-      
-      .board { margin: 10px auto !important; }
-      
+
+      .board {
+        margin: 10px auto !important;
+      }
+
       #deployEnd {
-         position: fixed;
-         top: 10px;
-         right: 10px;
-         z-index: 2100; // above rightPanel
-         margin: 0;
-         padding: 8px 12px;
-         font-size: 0.8rem;
-         background: #f3ad38;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 2100; // above rightPanel
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        background: #f3ad38;
       }
     }
-    
+
     .leftPanel {
       // Unit List (Bottom Sheet)
       position: fixed;
@@ -677,9 +720,14 @@ BATTLE SCENE
       border-top: 1px solid #333;
       padding: 10px;
       backdrop-filter: blur(5px);
-      
-      .playercoin { margin-bottom: 0.5rem; }
-      .unit-item { padding: 0.5rem; }
+
+      .playercoin {
+        margin-bottom: 0.5rem;
+      }
+
+      .unit-item {
+        padding: 0.5rem;
+      }
     }
   }
 
@@ -690,16 +738,19 @@ BATTLE SCENE
       width: 100vw;
       height: 100vh;
     }
-    
-    .centerPanel > div:first-child { // Custom div wrapper created by JS around the board
+
+    .centerPanel>div:first-child {
+      // Custom div wrapper created by JS around the board
       overflow: auto;
       width: 100vw;
       height: 100vh;
       padding-bottom: 180px; // clearance for bottom action menu
       box-sizing: border-box;
     }
-    
-    .board { margin: 10px auto !important; }
+
+    .board {
+      margin: 10px auto !important;
+    }
 
     #unitContainer {
       position: fixed;
@@ -714,26 +765,33 @@ BATTLE SCENE
       flex-wrap: wrap;
       padding: 15px;
       z-index: 2000;
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
       align-items: flex-start;
       justify-content: space-between;
       box-sizing: border-box;
-      
-      #unitStatus, #unitAttribute {
+
+      #unitStatus,
+      #unitAttribute {
         width: 48%; // halves
         margin: 0;
         padding: 5px;
         background: transparent;
         border: none;
-        
+
         .statusRow {
-           gap: 5px;
-           margin-bottom: 2px;
-           .paramName { font-size: 0.75rem; }
-           .paramValue { font-size: 0.75rem; }
+          gap: 5px;
+          margin-bottom: 2px;
+
+          .paramName {
+            font-size: 0.75rem;
+          }
+
+          .paramValue {
+            font-size: 0.75rem;
+          }
         }
       }
-      
+
       #turnEnd {
         width: 100%;
         margin: 10px 0 0 0;
@@ -749,6 +807,9 @@ BATTLE SCENE
     padding: 1.5rem;
     max-height: 80vh;
     overflow-y: auto;
-    h2 { font-size: 1.5rem; }
+
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 }
