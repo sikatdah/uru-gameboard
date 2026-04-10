@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tactical Battle System</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/window_catalogue.js"></script>
+    <script src="js/window_difficulty.js"></script>
+    <script src="js/window_unit_info.js"></script>
+    <script src="js/window_unit_status.js"></script>
+    <script src="js/window_action_menu.js"></script>
+    <script src="js/window_board_deploy.js"></script>
+    <script src="js/window_board_battle.js"></script>
+    <script src="js/window_deployment.js"></script>
+    <script src="js/window_battle.js"></script>
+    <script src="js/scene_base.js"></script>
+    <script src="js/scene_battle.js"></script>
+    <script src="js/scene_deployment.js"></script>
+    <script src="js/scene_splash.js"></script>
+    <script src="js/scene_title.js"></script>
+    <script src="js/game_audio.js"></script>
+    <script src="js/game_party.js"></script>
+    <script src="js/game_ai.js"></script>
+    <script src="js/game_controller.js"></script>
+    <script>
+      $(document).ready(function () {
+        window.app = new game_controller();
+        app.scene("splash");
+      });
+    </script>
+  </body>
+</html>
