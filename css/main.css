@@ -484,4 +484,162 @@ BATTLE SCENE
 
 .unit:hover {
   cursor: pointer;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* ==============================================================
+                          MOBILE RESPONSIVE
+================================================================= */
+@media screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  #title #gameName {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #title .menu {
+    width: 90%;
+  }
+  #deployment {
+    flex-direction: column;
+    height: 100vh;
+  }
+  #deployment .rightPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-height: 25vh;
+    overflow-y: auto;
+    border-bottom: 1px solid #333;
+    padding: 0.5rem 1rem;
+    z-index: 2000;
+    background: rgba(26, 33, 45, 0.95);
+    backdrop-filter: blur(5px);
+  }
+  #deployment .rightPanel .headerPanel {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  #deployment .rightPanel #unitInfo {
+    font-size: 0.8rem;
+  }
+  #deployment .rightPanel #unitInfo .unit-row, #deployment .rightPanel #unitInfo .info-row {
+    margin-bottom: 0.5rem;
+  }
+  #deployment .rightPanel #unitInfo hr {
+    margin-bottom: 0.5rem;
+  }
+  #deployment .centerPanel {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 25vh;
+    padding-bottom: 40vh;
+    display: block;
+    box-sizing: border-box;
+  }
+  #deployment .centerPanel .board {
+    margin: 10px auto !important;
+  }
+  #deployment .centerPanel #deployEnd {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2100;
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    background: #f3ad38;
+  }
+  #deployment .leftPanel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-height: 35vh;
+    overflow-y: auto;
+    z-index: 2000;
+    background: rgba(26, 33, 45, 0.95);
+    border-top: 1px solid #333;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+  }
+  #deployment .leftPanel .playercoin {
+    margin-bottom: 0.5rem;
+  }
+  #deployment .leftPanel .unit-item {
+    padding: 0.5rem;
+  }
+  #battle .centerPanel {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  #battle .centerPanel > div:first-child {
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 180px;
+    box-sizing: border-box;
+  }
+  #battle .board {
+    margin: 10px auto !important;
+  }
+  #battle #unitContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(26, 33, 45, 0.95);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    z-index: 2000;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  #battle #unitContainer #unitStatus, #battle #unitContainer #unitAttribute {
+    width: 48%;
+    margin: 0;
+    padding: 5px;
+    background: transparent;
+    border: none;
+  }
+  #battle #unitContainer #unitStatus .statusRow, #battle #unitContainer #unitAttribute .statusRow {
+    gap: 5px;
+    margin-bottom: 2px;
+  }
+  #battle #unitContainer #unitStatus .statusRow .paramName, #battle #unitContainer #unitAttribute .statusRow .paramName {
+    font-size: 0.75rem;
+  }
+  #battle #unitContainer #unitStatus .statusRow .paramValue, #battle #unitContainer #unitAttribute .statusRow .paramValue {
+    font-size: 0.75rem;
+  }
+  #battle #unitContainer #turnEnd {
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+  /* Modal Scaling */
+  .modal #content {
+    width: 90%;
+    padding: 1.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .modal #content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
